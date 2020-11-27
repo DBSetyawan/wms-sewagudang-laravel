@@ -1,0 +1,1010 @@
+{
+	"info": {
+		"_postman_id": "8a01a85a-a377-494d-99fa-48f9425129ce",
+		"name": "Sewagudang.id",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "loginmobile",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f16a107f-abed-4ca2-bbd6-f14a59926006",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "{{csrftoken}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "thierryhorax@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123123123",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/loginmobile",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"loginmobile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project - get all project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/getallproject",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"getallproject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gudang - get all gudang",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/getallgudang",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"getallgudang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inbound - get Inbound Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_token",
+							"value": "\"asd\"",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/project/:kodeproject/gudang/:kodegudang/inventory/inbound/:noinbound/detail",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"project",
+						":kodeproject",
+						"gudang",
+						":kodegudang",
+						"inventory",
+						"inbound",
+						":noinbound",
+						"detail"
+					],
+					"variable": [
+						{
+							"key": "kodeproject",
+							"value": "Th50015",
+							"type": "string"
+						},
+						{
+							"key": "kodegudang",
+							"value": "SG.180001",
+							"type": "string"
+						},
+						{
+							"key": "noinbound",
+							"value": "I1906200003",
+							"type": "string"
+						}
+					]
+				},
+				"description": "ada 3 array yang direturn \n1. daftar list inbound\n2. history inbound\n3. object project (hanya untuk generate barcode, tidak dipakai untuk informasi inbound)"
+			},
+			"response": []
+		},
+		{
+			"name": "inbound - get list inbound",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/project/:kodeproject/gudang/:kodegudang/inventory/inbound/daftarinbound",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"project",
+						":kodeproject",
+						"gudang",
+						":kodegudang",
+						"inventory",
+						"inbound",
+						"daftarinbound"
+					],
+					"variable": [
+						{
+							"key": "kodeproject",
+							"value": "Th50015",
+							"type": "string"
+						},
+						{
+							"key": "kodegudang",
+							"value": "SG.180001",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inbound - get template inbound",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/project/:kodeproject/templateinbound",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"project",
+						":kodeproject",
+						"templateinbound"
+					],
+					"variable": [
+						{
+							"key": "kodeproject",
+							"value": "Th50014",
+							"type": "string"
+						}
+					]
+				},
+				"description": "API ini hanya menyimpan custom label pada template inbound project tertentu\n\nuntuk android dev, untuk mengambil list custom label, cari array dengan nama :\ninbound header => daftar_label_custom_inbound_header,\ninbound detail => daftar_label_custom_inbound_detail,\nincoming inbound => daftar_label_custom_incoming_inbound"
+			},
+			"response": []
+		},
+		{
+			"name": "incoming - get list incoming",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/project/:kodeproject/gudang/:kodegudang/inventory/inbound/:noinbound/daftarincoming",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"project",
+						":kodeproject",
+						"gudang",
+						":kodegudang",
+						"inventory",
+						"inbound",
+						":noinbound",
+						"daftarincoming"
+					],
+					"variable": [
+						{
+							"key": "kodeproject",
+							"value": "Th50015",
+							"type": "string"
+						},
+						{
+							"key": "kodegudang",
+							"value": "SG.180001",
+							"type": "string"
+						},
+						{
+							"key": "noinbound",
+							"value": "I1906200003",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "incoming - Tambah Incoming Inbound",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "no_incoming_inbound",
+							"value": "Inc2206200001",
+							"type": "text"
+						},
+						{
+							"key": "tanggal_incoming_inbound",
+							"value": "22-06-2020",
+							"type": "text"
+						},
+						{
+							"key": "incoming_inbound_value",
+							"value": "[]",
+							"description": "format : array object, key : custom_label, value; contoh : [{\"custom_value\" : \"no.polisi\", \"value\" : \"L 3012 SA\"}]",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/project/:kodeproject/gudang/:kodegudang/inventory/inbound/:noinbound/incoming/store",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"project",
+						":kodeproject",
+						"gudang",
+						":kodegudang",
+						"inventory",
+						"inbound",
+						":noinbound",
+						"incoming",
+						"store"
+					],
+					"variable": [
+						{
+							"key": "kodeproject",
+							"value": "Th50015",
+							"type": "string"
+						},
+						{
+							"key": "kodegudang",
+							"value": "SG.180001",
+							"type": "string"
+						},
+						{
+							"key": "noinbound",
+							"value": "I1806200020",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "incoming - Generate nomor incoming",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/project/:kodeproject/gudang/:kodegudang/inventory/inbound/:noinbound/incoming/generatenoincoming",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"project",
+						":kodeproject",
+						"gudang",
+						":kodegudang",
+						"inventory",
+						"inbound",
+						":noinbound",
+						"incoming",
+						"generatenoincoming"
+					],
+					"variable": [
+						{
+							"key": "kodeproject",
+							"value": "Th50015",
+							"type": "string"
+						},
+						{
+							"key": "kodegudang",
+							"value": "SG.180001",
+							"type": "string"
+						},
+						{
+							"key": "noinbound",
+							"value": "I1806200020",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "incoming - get Incoming Detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/project/:kodeproject/gudang/:kodegudang/inventory/inbound/:noinbound/incoming/:noincoming/incomingdetail",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"project",
+						":kodeproject",
+						"gudang",
+						":kodegudang",
+						"inventory",
+						"inbound",
+						":noinbound",
+						"incoming",
+						":noincoming",
+						"incomingdetail"
+					],
+					"variable": [
+						{
+							"key": "kodeproject",
+							"value": "Th50013",
+							"type": "string"
+						},
+						{
+							"key": "kodegudang",
+							"value": "SG.180001",
+							"type": "string"
+						},
+						{
+							"key": "noinbound",
+							"value": "I1606200001",
+							"type": "string"
+						},
+						{
+							"key": "noincoming",
+							"value": "Inc1606200003",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "incoming - proses checklist item incoming",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "locator",
+							"value": "7",
+							"description": "alias id_locator",
+							"type": "text"
+						},
+						{
+							"key": "id_item",
+							"value": "70",
+							"type": "text"
+						},
+						{
+							"key": "id_inbound_detail",
+							"value": "529",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/project/:kodeproject/gudang/:kodegudang/inventory/inbound/:noinbound/incoming/:noincoming/checklistitem",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"project",
+						":kodeproject",
+						"gudang",
+						":kodegudang",
+						"inventory",
+						"inbound",
+						":noinbound",
+						"incoming",
+						":noincoming",
+						"checklistitem"
+					],
+					"variable": [
+						{
+							"key": "kodeproject",
+							"value": "Th50013",
+							"type": "string"
+						},
+						{
+							"key": "kodegudang",
+							"value": "SG.180001",
+							"type": "string"
+						},
+						{
+							"key": "noinbound",
+							"value": "I1606200001",
+							"type": "string"
+						},
+						{
+							"key": "noincoming",
+							"value": "Inc1606200002",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "incoming - get checklist item",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/project/:kodeproject/gudang/:kodegudang/inventory/inbound/:noinbound/incoming/:noincoming/getlistchecklistitem",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"project",
+						":kodeproject",
+						"gudang",
+						":kodegudang",
+						"inventory",
+						"inbound",
+						":noinbound",
+						"incoming",
+						":noincoming",
+						"getlistchecklistitem"
+					],
+					"variable": [
+						{
+							"key": "kodeproject",
+							"value": "Th50013",
+							"type": "string"
+						},
+						{
+							"key": "kodegudang",
+							"value": "SG.180001",
+							"type": "string"
+						},
+						{
+							"key": "noinbound",
+							"value": "I1606200001",
+							"type": "string"
+						},
+						{
+							"key": "noincoming",
+							"value": "Inc1606200002",
+							"type": "string"
+						}
+					]
+				},
+				"description": "untuk menampilkan list item yang akan di check list"
+			},
+			"response": []
+		},
+		{
+			"name": "incoming - finish document",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "list_id_incoming",
+							"value": "[130,131]",
+							"description": "list id yang dimiliki oleh incoming inbound, format : string json",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/project/:kodeproject/gudang/:kodegudang/inventory/inbound/:noinbound/incoming/:noincoming/finishdocument",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"project",
+						":kodeproject",
+						"gudang",
+						":kodegudang",
+						"inventory",
+						"inbound",
+						":noinbound",
+						"incoming",
+						":noincoming",
+						"finishdocument"
+					],
+					"variable": [
+						{
+							"key": "kodeproject",
+							"value": "Th50013",
+							"type": "string"
+						},
+						{
+							"key": "kodegudang",
+							"value": "SG.180001",
+							"type": "string"
+						},
+						{
+							"key": "noinbound",
+							"value": "I1606200001",
+							"type": "string"
+						},
+						{
+							"key": "noincoming",
+							"value": "Inc1606200002",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "outbound - get allocated list item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/project/:kodeproject/gudang/:kodegudang/inventory/outbound/:nooutbound/detail",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"project",
+						":kodeproject",
+						"gudang",
+						":kodegudang",
+						"inventory",
+						"outbound",
+						":nooutbound",
+						"detail"
+					],
+					"variable": [
+						{
+							"key": "kodeproject",
+							"value": "Th50013",
+							"type": "string"
+						},
+						{
+							"key": "kodegudang",
+							"value": "SG.180001",
+							"type": "string"
+						},
+						{
+							"key": "nooutbound",
+							"value": "O1506200003",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "outbound - proses picking allocated item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idinventorydetail",
+							"value": "151",
+							"type": "text"
+						},
+						{
+							"key": "idoutbounddetail",
+							"value": "193",
+							"type": "text"
+						},
+						{
+							"key": "qty",
+							"value": "4",
+							"description": "qty langsung ambil nilai maksimal",
+							"type": "text"
+						},
+						{
+							"key": "nooutbound",
+							"value": "O1506200002",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "Undo",
+							"description": "Undo/Picked - perhatikan uppercase",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/project/:kodeproject/gudang/:kodegudang/inventory/outbound/:nooutbound/picking",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"project",
+						":kodeproject",
+						"gudang",
+						":kodegudang",
+						"inventory",
+						"outbound",
+						":nooutbound",
+						"picking"
+					],
+					"variable": [
+						{
+							"key": "kodeproject",
+							"value": "Th50013",
+							"type": "string"
+						},
+						{
+							"key": "kodegudang",
+							"value": "SG.180001",
+							"type": "string"
+						},
+						{
+							"key": "nooutbound",
+							"value": "O1506200002",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "outgoing - tambah outgoing outbound",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2EyMTI5MjBiOTkxMjNiNDUzYjYwNDI2YmJmZWIxMjYzMzU4ZmQxODc1NDNmNGZhYjM1NjkxMGMxY2I5ZjUxNzY3ZjI2MTZkZDBhZjVmYmMiLCJpYXQiOjE1OTI4MDA1MDIsIm5iZiI6MTU5MjgwMDUwMiwiZXhwIjoxNjI0MzM2NTAyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AwjWZyKkdkMt-dkeCxXYlhl6d0yZoEqfP46dX7WrIMQZ9tpKR8XaQZLglDZzS6ftp4dH1z2zjU1VmmgPBJCt-D9s8q7Ngz89bTM6koTWA84ZV2rVmOTwD32rwufFBNVBvHut9URsqpiwj_uVA1WJrD5v9yaP0f_646Cjl30q1TMeSBHSTmTTIwUR4X3hk1iFCTBGUx072ESgkp340fZRGbtZcrYOEYgJOrwvVfs-AZqelbXgOYtAO8t8XOZeYWP3SBgwJ8KVAGjfsBirve_XMeqOHxXRG19DsxRnDiqg0LCmqMPFQwrR2SxJc5cY5YY9Kj4KzcXP_Bi0eGGzIUQEUzq7G1xlARBvLAiiJRtaQkcVN_cgSaY6nJ8II-MwgJpA_8L6cZBs0WalXVNJyHj3GmsDc9cgOzYIaq4aXZK0RVP2l_GfXKMK-m0pw7nhnGpusIY8iYKDEO2ZctTc99Lgm6OXwsF2wuhxN2IVPcI-_FaF1jAGiaGAw7xFJ7z19IIo4bDy2b-1LcABQlmatLKtl4M6SMs5ewQu6gCmU0M85UFqOOgF0fxOwkCKGkMynyUJA8itifRN4TY0-uMpZWr1HG5P7DuIThPVzyBp2DHfJbqLwjeBrzJBnJPzUP4hUzM8zwbBkVd_yzaHkAyYjEJoltYMpQbXAhcXWo1_yZW7pwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nooutgoingoutbound",
+							"value": "OO2206200005",
+							"type": "text"
+						},
+						{
+							"key": "tanggal_outgoing",
+							"value": "22-06-2020",
+							"type": "text"
+						},
+						{
+							"key": "outgoing_outbound_value",
+							"value": "[{\"custom_label\" : \"Nopolisi\", \"value\" : \"L 1456 AA\"}]",
+							"description": "format : array object, key : custom_label, value; contoh : [{\"custom_value\" : \"no.polisi\", \"value\" : \"L 3012 SA\"}]",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "localhost/sewagudangid/public/api/v1/project/:kodeproject/gudang/:kodegudang/inventory/outbound/:nooutbound/outgoing/store",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewagudangid",
+						"public",
+						"api",
+						"v1",
+						"project",
+						":kodeproject",
+						"gudang",
+						":kodegudang",
+						"inventory",
+						"outbound",
+						":nooutbound",
+						"outgoing",
+						"store"
+					],
+					"variable": [
+						{
+							"key": "kodeproject",
+							"value": "Th50013",
+							"type": "string"
+						},
+						{
+							"key": "kodegudang",
+							"value": "SG.180001",
+							"type": "string"
+						},
+						{
+							"key": "nooutbound",
+							"value": "O1506200002",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

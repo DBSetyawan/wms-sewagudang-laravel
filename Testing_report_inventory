@@ -1,0 +1,16 @@
+SELECT DISTINCT inboundIn.label, inboundIn.qty_in, outboundOut.qty_out
+FROM 
+   (select itm.id_item as iditem, inbd.label as label, invd.id_inventory_detail as id_inventory_detail, sum(inbd.qty_aktual) as qty_in
+    from tbl_inventory_detail as invd
+    inner JOIN tbl_inventory as inv on invd.id_inventory = inv.id_inventory
+    inner join tbl_inbound_detail as inbd on inbd.id_inbound_detail = inv.id_inbound_detail
+    inner join tbl_item as itm on itm.id_item = inbd.id_item 
+    group by inbd.label) as inboundIn
+INNER join 
+	(select i.id_item as id_item, outd.label as label, invd.id_inventory_detail as id_inventory_detail, sum(outd.qty_load) as qty_out
+     from tbl_inventory_detail as invd 
+     inner join tbl_outbound_detail as outd on invd.id_inventory_detail = outd.id_inventory_detail
+     inner join tbl_item as i on i.id_item = outd.id_item
+     GROUP BY outd.label) as outboundOut on outboundOut.id_inventory_detail = inboundIn.id_inventory_detail
+GROUP BY inboundIn.id_inventory_detail, inboundIn.iditem,inboundIn.label  
+ORDER BY `inboundIn`.`label` ASC
